@@ -1,0 +1,2 @@
+config/serviceAccountKey.json  # Clave privada del Firebase Admin SDK
+.env                        
