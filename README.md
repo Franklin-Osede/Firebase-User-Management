@@ -1,106 +1,117 @@
 # Firebase User Management
 
 ## **Overview**
-Este proyecto proporciona herramientas administrativas para gestionar datos en Firebase que no se pueden modificar directamente desde la consola. Esto incluye tareas como la actualización de correos electrónicos de usuarios y la sincronización de datos entre Firebase Authentication y Firestore.
+This project provides administrative tools to manage data in Firebase that cannot be modified directly through the console. It includes tasks such as updating user email addresses, synchronizing data between Firebase Authentication and Firestore, and other advanced database manipulations.
 
-Está diseñado para facilitar la manipulación de datos críticos que requieren lógica avanzada y no pueden resolverse manualmente.
+It is designed to facilitate the management of critical data that requires advanced logic and cannot be handled manually.
 
 ---
 
 ## **Core Features**
-- **Gestión de usuarios en Firebase Authentication:**
-  - Actualización de correos electrónicos.
-  - Eliminación y creación de usuarios específicos.
+- **Firebase Authentication Management:**
+  - Updating user email addresses.
+  - Deleting and creating specific users.
 
-- **Sincronización con Firestore:**
-  - Actualización de datos relacionados con los usuarios.
+- **Firestore Synchronization:**
+  - Updating user-related data based on authentication changes.
 
-- **Integración con Firebase Admin SDK:**
-  - Interacciones avanzadas con Firebase Authentication y Firestore.
+- **Firebase Admin SDK Integration:**
+  - Advanced interactions with Firebase Authentication and Firestore.
 
 ---
 
 ## **Project Structure**
-El proyecto sigue una estructura modular para facilitar su mantenimiento y escalabilidad:
+The project follows a modular structure for easy maintenance and scalability:
+
 
 firebase-user-management/
-├── scripts/                   # Scripts para tareas específicas
-│   ├── updateEmail.js         # Actualiza correos electrónicos de usuarios
-├── utils/                     # Funciones reutilizables
-│   ├── firebaseAdmin.js       # Inicialización del Firebase Admin SDK
-│   └── logging.js             # Funciones de logging para depuración
-├── config/                    # Archivos de configuración
-│   └── serviceAccountKey.json # Credenciales del Admin SDK
-├── package.json               # Dependencias del proyecto
-├── .gitignore                 # Archivos ignorados por Git
-├── README.md                  # Documentación del proyecto
-└── tsconfig.json              # Configuración de TypeScript (si aplica)
+├── scripts/                   # Scripts for specific tasks
+│   ├── updateEmail.js         # Updates user email addresses
+├── utils/                     # Reusable utility functions
+│   ├── firebaseAdmin.js       # Firebase Admin SDK initialization
+│   └── logging.js             # Logging functions for debugging
+├── config/                    # Configuration files
+│   └── serviceAccountKey.json # Admin SDK credentials
+├── package.json               # Project dependencies
+├── .gitignore                 # Files ignored by Git
+├── README.md                  # Project documentation
+└── tsconfig.json              # TypeScript configuration (if applicable)
 
 Getting Started
 
 Prerequisites
 
-Node.js: Instala la última versión desde nodejs.org.
-Firebase CLI: Instala la Firebase CLI globalmente:
+Node.js: Install the latest version from nodejs.org.
+
+Firebase CLI: Install the Firebase CLI globally:
 
 npm install -g firebase-tools
 
-Credenciales de Firebase Admin SDK: Descarga el archivo serviceAccountKey.json desde la consola de Firebase:
-Ve a Configuración del proyecto > Cuentas de servicio.
+Firebase Admin SDK Credentials:
 
-Genera una nueva clave privada y guárdala en config/serviceAccountKey.json.
+Download the serviceAccountKey.json file from the Firebase console:
 
+Go to Project Settings > Service Accounts.
 
-Clona este repositorio:
+Generate a new private key and save it to config/serviceAccountKey.json.
+
+Installation
+
+Clone this repository:
 
 git clone https://github.com/yourusername/firebase-user-management.git
 
 cd firebase-user-management
 
-Instala las dependencias del proyecto:
+Install project dependencies:
 
 npm install
-Configura las variables de entorno:
 
-Crea un archivo .env en el directorio raíz con las siguientes variables:
+Set up environment variables:
+
+Create a .env file in the root directory with the following variables:
 
 FIREBASE_CONFIG=your_firebase_config
-Running the Application
-Para ejecutar los scripts, utiliza node.
 
-Ejemplo: Actualizar correo electrónico
+Running the Application
+
+To execute scripts, use node.
+
+Example: Update Email
 
 node scripts/updateEmail.js
-Scripts disponibles
 
-1. Actualizar correo electrónico
-updateEmail.js: Cambia el correo electrónico de un usuario específico en Firebase Authentication.
+Available Scripts
+
+1. Update Email
+updateEmail.js: Updates the email address of a specific user in Firebase Authentication.
 
 Built With
 
-Firebase Admin SDK: Para la gestión avanzada de usuarios y bases de datos en Firebase.
-Node.js: Entorno de ejecución para el backend.
+Firebase Admin SDK: For advanced user and database management in Firebase.
+Node.js: Backend runtime environment.
 
-TypeScript (opcional): Para tipado estático y mayor robustez del código.
+TypeScript (optional): For static typing and improved code robustness.
 
 Contributing
 
-Contribuciones son bienvenidas. Sigue estos pasos para colaborar:
+Contributions are welcome! Follow these steps to contribute:
 
-Haz un fork del repositorio.
+Fork the repository.
+Create a new branch for your feature:
 
-Crea una nueva rama para tu funcionalidad:
+git checkout -b feature/AmazingFeature
 
-git checkout -b feature/NuevaFuncionalidad
-Realiza tus cambios y haz commits:
+Commit your changes:
 
-git commit -m "Descripción de los cambios"
-Haz un push de tus cambios:
+git commit -m "Add some AmazingFeature"
 
-git push origin feature/NuevaFuncionalidad
+Push to the branch:
 
-Abre un Pull Request.
+git push origin feature/AmazingFeature
+
+Open a Pull Request.
 
 License
 
-Distribuido bajo la licencia MIT. Consulta el archivo LICENSE para más información.
+Distributed under the MIT License. See LICENSE for more information
